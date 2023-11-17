@@ -74,13 +74,9 @@ class BOOK(LoggerClass):
             self.dic['prices'].extend(prices)
             self.dic['urls'].extend(urls)
             self.dic['availability'].extend(availabilitys)
-
+        
+        self.driver.quit()
         df = pd.DataFrame(self.dic)
         df['Data'] = datetime.now().strftime('%d/%m/%Y')
         return df 
     
-if __name__ == '__main__':
-    book  = BOOK()
-    sheet = book.scraper() 
-    
-    sheet.to_excel('PLANILHAS/planilha3.xlsx', index=False)
