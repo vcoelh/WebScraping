@@ -83,4 +83,4 @@ if __name__ == '__main__':
     book  = BOOK()
     sheet = book.scraper() 
     
-    sheet.to_excel('PLANILHAS/planilha3.xlsx', index=flas)
+    sheet.to_excel('PLANILHAS/planilha3.xlsx', index=False)
